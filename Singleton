@@ -1,0 +1,14 @@
+public class MeuSingleton {
+	
+	private static MeuSingleton instance;
+	
+	private MeuSingleton(){
+		
+	}
+	public static synchronized MeuSingleton getInstance(){
+		if (instance==null){
+			instance = new MeuSingleton();
+		}
+		return instance;
+	}
+}
